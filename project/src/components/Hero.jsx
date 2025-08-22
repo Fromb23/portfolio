@@ -62,7 +62,7 @@ const Hero = () => {
             target='_blank'>
             <Github size={24} />
           </a>
-          <a href="https://www.linkedin.com/in/francis-rombo/" className="text-secondary hover:text-accent transition-all hover:scale-110 p-2 bg-card rounded-lg shadow-theme"
+          <a href="https://www.linkedin.com/in/rombo-francis-40aa82207?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-secondary hover:text-accent transition-all hover:scale-110 p-2 bg-card rounded-lg shadow-theme"
             aria-label="LinkedIn"
             target='_blank'>
             <Linkedin size={24} />
