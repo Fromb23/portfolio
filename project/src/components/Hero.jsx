@@ -33,10 +33,10 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="button-primary px-8 py-3 rounded-lg font-medium text-lg hover:scale-105 transition-transform flex items-center justify-center group">
+            {/* <button className="button-primary px-8 py-3 rounded-lg font-medium text-lg hover:scale-105 transition-transform flex items-center justify-center group">
               View My Work
               <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </button> */}
             <a
               href="/Francis_Rombo_CV.pdf"
               target="_blank"
