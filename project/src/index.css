@@ -1,0 +1,163 @@
+@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Enable dark variant globally */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* =====================
+   Root Theme Variables
+   ===================== */
+:root {
+  /* --- Base Colors --- */
+  --color-bg-primary: #f3e4e4;          /* Light background */
+  --color-bg-secondary: #d3d3e0;        /* Slightly off-white */
+  --color-bg-card: #ffffff;             /* Cards & panels */
+  --color-bg-accent: #090921;           /* Deep navy accent for contrast */
+  --color-bg-accent-dark: #050511;      /* Darker shade for hover */
+  
+  --color-text-primary: #1a1a2e;        /* Dark text for readability */
+  --color-text-secondary: #4b4b6b;      /* Secondary text */
+  --color-text-accent: #090921;         /* Accent text */
+  --color-text-on-accent: #ffffff;      /* Text on accent bg */
+  
+  --color-border-primary: #e0e0f0;
+  --color-border-secondary: #d0d0e0;
+  --color-border-accent: #090921;
+
+  --color-shadow: rgba(9, 9, 33, 0.08);
+  --color-shadow-lg: rgba(9, 9, 33, 0.15);
+
+  /* --- Button Variants --- */
+  --btn-primary: #090921;
+  --btn-primary-hover: #050511;
+  --btn-secondary: #ffffff;
+  --btn-secondary-hover: #f0f0ff;
+  --btn-destructive: #dc2626;
+  --btn-destructive-hover: #b91c1c;
+  --btn-outline: transparent;
+
+  /* --- Status Colors --- */
+  --status-success: #16a34a;
+  --status-warning: #f59e0b;
+  --status-error: #dc2626;
+  --status-pending: #fbbf24;
+  --status-info: #3b82f6;
+  --status-default: #6b7280; /* gray for neutral/waiting */
+}
+
+/* =====================
+   Dark Theme Overrides
+   ===================== */
+.dark {
+  --color-bg-primary: #090921;         /* Dominant dark background */
+  --color-bg-secondary: #0f0f3a;       /* Slightly lighter section */
+  --color-bg-card: #0d0d33;            /* Card background */
+  --color-bg-accent: #3b82f6;           /* Bright accent for dark mode */
+  --color-bg-accent-dark: #2563eb;      /* Hover variant */
+  
+  --color-text-primary: #f5f5f5;        /* Light text for contrast */
+  --color-text-secondary: #c0c0ff;      /* Secondary text */
+  --color-text-accent: #3b82f6;         /* Accent text */
+  --color-text-on-accent: #ffffff;      /* Text on accent bg */
+
+  --color-border-primary: #1a1a3d;
+  --color-border-secondary: #2a2a5a;
+  --color-border-accent: #3b82f6;
+
+  --color-shadow: rgba(0,0,0,0.4);
+  --color-shadow-lg: rgba(0,0,0,0.6);
+
+  --btn-primary: #3b82f6;
+  --btn-primary-hover: #2563eb;
+  --btn-secondary: #1a1a3d;
+  --btn-secondary-hover: #2a2a5a;
+  --btn-destructive: #ef4444;
+  --btn-destructive-hover: #dc2626;
+
+  --status-success: #22c55e;
+  --status-warning: #facc15;
+  --status-error: #f87171;
+  --status-pending: #fbbf24;
+  --status-info: #60a5fa;
+  --status-default: #9ca3af;
+}
+
+/* =====================
+   Base Styles
+   ===================== */
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* =====================
+   Component Utilities
+   ===================== */
+/* Backgrounds */
+.bg-primary { background-color: var(--color-bg-primary); }
+.bg-secondary { background-color: var(--color-bg-secondary); }
+.bg-card { background-color: var(--color-bg-card); }
+.bg-accent { background-color: var(--color-bg-accent); }
+
+/* Text Colors */
+.text-primary { color: var(--color-text-primary); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-accent { color: var(--color-text-accent); }
+.text-on-accent { color: var(--color-text-on-accent); }
+
+/* Borders */
+.border-primary { border-color: var(--color-border-primary); }
+.border-secondary { border-color: var(--color-border-secondary); }
+.border-accent { border-color: var(--color-border-accent); }
+
+/* Shadows */
+.shadow-theme { box-shadow: 0 1px 3px var(--color-shadow); }
+.shadow-theme-lg { box-shadow: 0 4px 6px var(--color-shadow-lg); }
+
+/* =====================
+   Buttons
+   ===================== */
+.button-primary {
+  background-color: var(--btn-primary);
+  color: var(--color-text-on-accent);
+}
+.button-primary:hover { background-color: var(--btn-primary-hover); }
+
+.button-secondary {
+  background-color: var(--btn-secondary);
+  border: 1px solid var(--color-border-primary);
+  color: var(--color-text-primary);
+}
+.button-secondary:hover { background-color: var(--btn-secondary-hover); }
+
+.button-destructive {
+  background-color: var(--btn-destructive);
+  color: white;
+}
+.button-destructive:hover { background-color: var(--btn-destructive-hover); }
+
+.button-outline {
+  background-color: var(--btn-outline);
+  border: 1px solid var(--color-border-primary);
+  color: var(--color-text-primary);
+}
+.button-outline:hover { background-color: var(--color-bg-secondary); }
+
+/* =====================
+   Status Colors (Text & Background)
+   ===================== */
+.text-success { color: var(--status-success); }
+.text-warning { color: var(--status-warning); }
+.text-error { color: var(--status-error); }
+.text-pending { color: var(--status-pending); }
+.text-info { color: var(--status-info); }
+.text-default { color: var(--status-default); }
+
+.bg-success { background-color: var(--status-success); color: white; }
+.bg-warning { background-color: var(--status-warning); color: white; }
+.bg-error { background-color: var(--status-error); color: white; }
+.bg-pending { background-color: var(--status-pending); color: white; }
+.bg-info { background-color: var(--status-info); color: white; }
+.bg-default { background-color: var(--status-default); color: white; }
