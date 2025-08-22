@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Code, User, Layers, Terminal, Mail, Sun, Moon, Send, Menu, X } from 'lucide-react';
+import { Code, User, Layers, Terminal, Mail, Sun, Moon, Send, Menu, X, Star } from 'lucide-react';
 import { useTheme } from '../contexts/themeContext';
 
 const Header = () => {
@@ -36,6 +36,10 @@ const Header = () => {
             <a href="#services" className="text-primary hover:text-accent transition-colors flex items-center group">
               <Layers size={16} className="mr-1 group-hover:scale-110 transition-transform" />
               Services
+            </a>
+            <a href="#skills" className="text-primary hover:text-accent transition-colors flex items-center group">
+              <Star size={16} className="mr-1 group-hover:scale-110 transition-transform" />
+              Expertise
             </a>
             <a href="#projects" className="text-primary hover:text-accent transition-colors flex items-center group">
               <Terminal size={16} className="mr-1 group-hover:scale-110 transition-transform" />
@@ -92,6 +96,10 @@ const Header = () => {
               <a href="#projects" className="block text-primary hover:text-accent py-2 flex items-center" onClick={() => setIsMenuOpen(false)}>
                 <Terminal size={16} className="mr-2" />
                 Projects
+              </a>
+              <a href="#skills" className="block text-primary hover:text-accent py-2 flex items-center" onClick={() => setIsMenuOpen(false)}>
+                <Star size={16} className="mr-2" />
+                Expertise
               </a>
               <a href="#contact" className="block text-primary hover:text-accent py-2 flex items-center" onClick={() => setIsMenuOpen(false)}>
                 <Mail size={16} className="mr-2" />
