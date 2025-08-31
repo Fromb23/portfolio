@@ -36,7 +36,7 @@ const AboutMe = () => {
             <div className="relative inline-block">
               <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden shadow-theme-lg border-4 border-accent animate-float">
                 <img
-                  src="logo.jpg"
+                  src="myself1.jpeg"
                   alt="Francis Rombo"
                   className="w-full h-full object-cover transition-transform hover:scale-110 duration-700"
                 />
